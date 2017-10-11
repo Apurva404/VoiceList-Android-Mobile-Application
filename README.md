@@ -1,8 +1,9 @@
 # VoiceListApp
 This is an android app, which facilitates the generation and collection of a list of items. The motivation behind the app is: 
-•To provide an easy user interface which enables end user to create the list of items she wants to buy (ex: grocery, utility list, 
+ •To provide an easy user interface which enables end user to create the list of items she wants to buy (ex: grocery, utility list, 
 stationary list) using her voice input. 
-•The user can open the app and add items to a list, whenever she remembers about an item to be bought and doesn’t need to type anything.
+ •The user can open the app and add items to a list, whenever she remembers about an item to be bought and doesn’t need to type anything.
+
 README
 1.	Download/Transfer the .apk file of the project to your device
 2.	Install the application on the device.
