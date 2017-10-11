@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/beige"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher" />
+        <Button
+            android:id="@+id/listNameButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image1"
+            android:layout_toRightOf="@id/image1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/beige"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textAllCaps="false"
+            android:onClick="renameList"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/stroke_bg">
+            <LinearLayout
+                android:id="@+id/listItemLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </LinearLayout>
+
+
+        </ScrollView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@null"
+            android:src="@mipmap/mic_button"
+            android:onClick="promptSpeechInput"/>
+
+        <Button
+            android:id ="@+id/saveListButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/btnSpeak"
+            android:layout_marginLeft="30dp"
+            android:background="@color/red"
+            android:text="@string/btn_save_label"
+            android:textColor="@color/beige"
+            android:onClick="saveList"/>
+        <Button
+            android:id ="@+id/backButton"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/btnSpeak"
+            android:layout_marginRight="30dp"
+            android:background="@color/brown"
+            android:text="@string/btn_back_label"
+            android:textColor="@color/beige"
+            android:onClick="back"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/btnText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:text="@string/tap_on_mic"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+
+
+    </RelativeLayout>
+</LinearLayout>

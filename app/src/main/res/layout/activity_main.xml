@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/beige"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp">
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/app_name"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/image1"
+            android:layout_toRightOf="@id/image1"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:text="@string/app_label"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+        <Button
+            android:id="@+id/close_app"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/brown"
+            android:text="Close"
+            android:textAllCaps="false"
+            android:textColor="@color/beige"
+            android:textSize="20dp"
+            android:onClick="closeApp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp">
+        <Button
+            android:layout_width="160dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/brown"
+            android:textColor="@color/beige"
+            android:text="@string/btn_create_label"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:onClick="createList"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="5dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+        <EditText
+            android:id="@+id/filter_edit_text"
+            android:layout_width="180dp"
+            android:layout_height="25dp"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:padding="5dp"
+            android:hint="@string/type_here_hint" />
+        <Button
+            android:id="@+id/filter_button"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_toRightOf="@id/filter_edit_text"
+            android:layout_toEndOf="@id/filter_edit_text"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:background="@color/brown"
+            android:textColor="@color/beige"
+            android:text="@string/btn_filter_label"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:onClick="filterList"/>
+        <Button
+            android:id="@+id/clear_button"
+            android:layout_width="70dp"
+            android:layout_height="25dp"
+            android:layout_toEndOf="@id/filter_button"
+            android:layout_toRightOf="@id/filter_button"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@color/brown"
+            android:textColor="@color/beige"
+            android:text="@string/btn_clear_label"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:onClick="clearFilter"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp">
+        <Spinner
+            android:id="@+id/sort_spinner"
+            android:layout_width="140dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/brown"
+            android:textColor="@color/beige"
+            android:text="@string/btn_sort_label"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            android:spinnerMode="dropdown" />
+        <TextView
+            android:id="@+id/sort_label"
+            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_toLeftOf="@id/sort_spinner"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="20dp"
+            android:text="@string/sort_label"
+            android:textColor="@color/black"
+            android:background="@color/beige"
+            android:textSize="15sp"
+            android:textAllCaps="false"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/white"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/stroke_bg">
+
+            <LinearLayout
+                android:id = "@+id/list_of_lists_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>
+
